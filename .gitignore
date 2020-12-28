@@ -1,0 +1,5 @@
+/eventbrite/.idea/
+/eventbrite/venv/
+/eventbrite/log_file.txt
+/eventbrite/output.csv
+/eventbrite/output.json
