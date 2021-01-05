@@ -27,6 +27,7 @@ class EventbriteItem(scrapy.Item):
     summary = scrapy.Field()
     meta_description = scrapy.Field()
     canonical_url = scrapy.Field()
+    response_url = scrapy.Field()
 
 
 class EventbriteItemLoader(ItemLoader):

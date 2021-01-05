@@ -63,9 +63,10 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'eventbrite.pipelines.EventbritePipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'eventbrite.pipelines.EventbritePipeline': 300,
+   'eventbrite.pipelines.DuplicatesPipeline': 400,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -114,5 +115,5 @@ USER_AGENT_CHOICES = [
 LOG_STDOUT = True
 LOG_FILE = f'log_file.txt'
 
-FEED_FORMAT = 'json'
-FEED_URI = 'output.json'
+FEED_FORMAT = 'jsonlines'
+FEED_URI = 'jsonlines_output.json'
